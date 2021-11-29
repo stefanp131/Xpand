@@ -48,15 +48,15 @@ namespace Xpand.API.Controllers
         }
 
         [HttpPost("login")]    
-        public async Task<ActionResult<UserDto>> Login(LoginUserDto loginDto)
+        public async Task<ActionResult<UserDto>> Login(LoginUserDto loginUserDto)
         {
             var user = await this.userManager.Users
-                .SingleOrDefaultAsync(x => x.UserName == loginDto.UserName.ToLower());
+                .SingleOrDefaultAsync(x => x.UserName == loginUserDto.UserName.ToLower());
 
             if (user == null) return Unauthorized("Invalid username");
 
             var result = await this.signInManager
-                .CheckPasswordSignInAsync(user, loginDto.Password, false);
+                .CheckPasswordSignInAsync(user, loginUserDto.Password, false);
 
             if (!result.Succeeded) return Unauthorized();
 
