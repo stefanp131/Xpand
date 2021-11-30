@@ -28,13 +28,14 @@ namespace Xpand.API.Services
             {
                 new Claim(JwtRegisteredClaimNames.NameId, user.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName),
+                new Claim("robots_crew", user.RobotsCrew),
             };
 
             //For Roles
 
             //var roles = await this.userManager.GetRolesAsync(user);
 
-            //claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
+            //claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));            
 
             var creds = new SigningCredentials(this.key, SecurityAlgorithms.HmacSha512Signature);
 

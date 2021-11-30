@@ -1,12 +1,14 @@
-<mat-toolbar color="primary">
-    <div class="toolbar-area" fxLayout="row" fxLayoutAlign="space-between">
+<mat-toolbar>
+  <div class="toolbar-area">
+    <div class="centered-title" >
+      <span style="font-family: 'Bowlby One SC'; color: white;">XpanD</span>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between">
       <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1rem">
-        <span style="font-family: 'Bowlby One SC';">XpanD</span>
-        <span  *ngIf="accountService.currentUser$ | async">Hi {{(accountService.currentUser$ | async).userName}}!</span>
-        <button mat-raised-button *ngIf="accountService.currentUser$ | async" routerLink="/planets-board" color="accent">
+        <button mat-raised-button *ngIf="accountService.currentUser$ | async" routerLink="/planets-board" color="primary">
           <span>Planets Board</span>
         </button>
-      </div>
+      </div>      
       <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1rem">
         <button mat-raised-button *ngIf="(accountService.currentUser$ | async) === null" color="info" routerLink="/register">
           Register
@@ -19,4 +21,6 @@
         </button>
       </div>
     </div>
+  </div>
+
 </mat-toolbar>

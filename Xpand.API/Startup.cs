@@ -14,6 +14,8 @@ using Xpand.API.Interfaces;
 using Xpand.API.Services;
 using Xpand.DATA.DataContext;
 using Xpand.DATA.Entities;
+using Xpand.DATA.IRepositories;
+using Xpand.DATA.Repositories;
 
 namespace Xpand.API
 {
@@ -31,6 +33,7 @@ namespace Xpand.API
         {
             services.AddControllers();
 
+            services.AddScoped<IPlanetsRepository, PlanetsRepository>();
             services.AddScoped<ITokenService, TokenService>();
             services.AddAutoMapper(typeof (AutoMapperProfiles).Assembly);
             services.AddDbContext<XpandContext>(options =>

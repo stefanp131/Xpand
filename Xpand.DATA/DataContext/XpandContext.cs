@@ -10,6 +10,7 @@ namespace Xpand.DATA.DataContext
     {
         public XpandContext(DbContextOptions options) : base(options) { }
         
+        public DbSet<Planet> Planets { get; set; }
         protected override void OnModelCreating(ModelBuilder builder) 
         {
             base.OnModelCreating(builder);

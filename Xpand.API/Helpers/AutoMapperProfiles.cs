@@ -9,6 +9,8 @@ namespace Xpand.API.Helpers
         public AutoMapperProfiles()
         {
             CreateMap<RegisterUserDto, AppUser>();
+            CreateMap<PlanetDto, Planet>();
+
         }
     }
 }

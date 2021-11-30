@@ -1,3 +1,15 @@
+.mat-toolbar {
+    background-color: #A75E68;
+}
+
 .toolbar-area {
     width: 100%;
+    position: relative;
+}
+
+.centered-title {
+    position: absolute;               
+    top: 50%;
+    left: 50%;                         
+    transform: translate(-50%, -50%) 
 }

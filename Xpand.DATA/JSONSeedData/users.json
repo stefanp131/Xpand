@@ -1,0 +1,17 @@
+[
+    {
+        "UserName": "John",
+        "Email": "address1@mailinator.com",
+        "RobotsCrew": "Robot 1, Robot 2, Robot 3"
+    },
+    {
+        "UserName": "Robert",
+        "Email": "address2@mailinator.com",
+        "RobotsCrew": "Robot 4, Robot 5, Robot 6"
+    },
+    {
+        "UserName": "Steven",
+        "Email": "address3@mailinator.com",
+        "RobotsCrew": "Robot 7, Robot 8, Robot 9"
+    }
+]

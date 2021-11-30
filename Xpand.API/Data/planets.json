@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "Mercury",
+        "AssetImageName": "Mercury.jpg"
+    },
+    {
+        "Name": "Venus",
+        "AssetImageName": "Venus.jpg"
+    },
+    {
+        "Name": "Earth",
+        "AssetImageName": "Earth.jpg"
+    },
+    {
+        "Name": "Mars",
+        "AssetImageName": "Mars.jpg"
+    },
+    {
+        "Name": "Jupiter",
+        "AssetImageName": "Jupiter.jpg"
+    },
+    {
+        "Name": "Saturn",
+        "AssetImageName": "Saturn.jpg"
+    },
+    {
+        "Name": "Neptune",
+        "AssetImageName": "Neptune.jpg"
+    },
+    {
+        "Name": "Uranus",
+        "AssetImageName": "Uranus.jpg"
+    }
+]
