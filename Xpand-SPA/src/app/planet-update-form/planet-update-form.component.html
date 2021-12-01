@@ -1,0 +1,23 @@
+ <mat-card class="planet-form-card">
+    <mat-card-title>
+        <h2>Planet Details</h2>
+    </mat-card-title>
+    <mat-card-content>
+        <form autocomplete="off" [formGroup]="planetForm" (ngSubmit)="planetForm.valid && update()">
+            <div fxLayout="column">
+                <mat-form-field appearance="outline">
+                    <textarea matInput formControlName="description" rows="4" type="text" placeholder="Enter your description"></textarea>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Status</mat-label>
+                    <mat-select formControlName="status" [compareWith]="compareStatus">
+                      <mat-option [value]="item.id" *ngFor="let item of matSelectValues">
+                        {{item.name}}
+                      </mat-option>                      
+                    </mat-select>
+                  </mat-form-field>              
+                <button color="primary" mat-raised-button [disabled]="!planetForm.valid">Update</button>
+            </div>                
+        </form>
+    </mat-card-content>    
+ </mat-card>

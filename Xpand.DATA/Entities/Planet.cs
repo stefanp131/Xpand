@@ -13,5 +13,6 @@ namespace Xpand.DATA.Entities
         public string Description { get; set; }
         public Status Status { get; set; }
         public string RobotsCrew { get; set; }
+        public string LastEditedBy { get; set; }
     }
 }

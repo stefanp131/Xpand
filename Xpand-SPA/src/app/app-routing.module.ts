@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PlanetUpdateFormComponent } from './planet-update-form/planet-update-form.component';
 import { PlanetsBoardComponent } from './planets-board/planets-board.component';
 import { RegisterComponent } from './register/register.component';
 
@@ -11,7 +12,9 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'planets-board', component: PlanetsBoardComponent, canActivate: [AuthGuard] },
-  { path: '**', component: HomeComponent}
+  { path: 'planets-board/:id', component: PlanetUpdateFormComponent, canActivate: [AuthGuard] },
+
+  //{ path: '**', component: HomeComponent}
 ];
 
 @NgModule({

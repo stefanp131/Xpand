@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PlanetsBoardComponent } from './planets-board/planets-board.component';
+import { PlanetUpdateFormComponent } from './planet-update-form/planet-update-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { PlanetsBoardComponent } from './planets-board/planets-board.component';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    PlanetsBoardComponent
+    PlanetsBoardComponent,
+    PlanetUpdateFormComponent
+    
   ],
   imports: [
     BrowserModule,

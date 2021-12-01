@@ -28,7 +28,7 @@ namespace Xpand.API.Services
             {
                 new Claim(JwtRegisteredClaimNames.NameId, user.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName),
-                new Claim("robots_crew", user.RobotsCrew),
+                new Claim("robotsCrew", user.RobotsCrew),
             };
 
             //For Roles

@@ -28,8 +28,7 @@ export class LoginComponent implements OnInit {
   login() {
     this.accountService.login(this.loginForm.value).subscribe(() => {
       this.router.navigate(['./planets-board']);
-      this.snackBar.open('Successfully logged in!', 'Dismiss', { duration: 5000 })
-      
+      this.snackBar.open('Successfully logged in!', 'Dismiss', { duration: 5000 })      
     }, () => {
       this.snackBar.open('Wrong credentials!', 'Dismiss', { duration: 5000 })
     });

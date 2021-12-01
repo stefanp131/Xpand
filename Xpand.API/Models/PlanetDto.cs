@@ -12,5 +12,6 @@ namespace Xpand.API.Models
         public string Description { get; set; }
         public int Status { get; set; }
         public string RobotsCrew { get; set; }
+        public string LastEditedBy { get; set; }
     }
 }

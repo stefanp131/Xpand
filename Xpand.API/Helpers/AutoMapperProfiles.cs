@@ -10,6 +10,7 @@ namespace Xpand.API.Helpers
         {
             CreateMap<RegisterUserDto, AppUser>();
             CreateMap<PlanetDto, Planet>();
+            CreateMap<Planet, PlanetDto>();
 
         }
     }

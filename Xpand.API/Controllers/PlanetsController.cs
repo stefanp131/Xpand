@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -23,15 +24,26 @@ namespace Xpand.API.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAllPlanets() 
         {
-            var planets = await this.planetsRepository.GetPlanets();
+            var entityPlanets = await this.planetsRepository.GetPlanets();
 
-            if (planets.Any()) {
-                return Ok(planets);
+            if (!entityPlanets.Any()) {
+                return NoContent();
             }
 
-            return NoContent();
+            var planets = this.mapper.Map<List<PlanetDto>>(entityPlanets);
+
+            return Ok(planets);
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult> GetPlanetById(int id) 
+        {
+            var planet = await this.planetsRepository.GetPlanetById(id);
+
+            if (planet != null) return  Ok(this.mapper.Map<PlanetDto>(planet));
+
+            return NotFound();
+        }
         
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdatePlanet([FromRoute] int id, [FromBody] PlanetDto planetDto) 

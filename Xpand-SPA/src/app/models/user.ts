@@ -2,4 +2,5 @@ export interface User {
     userName: string;
     token: string;
     roles: string[];
+    robotsCrew: string;
 }

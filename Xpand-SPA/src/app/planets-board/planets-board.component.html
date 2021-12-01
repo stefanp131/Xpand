@@ -1,1 +1,24 @@
-<p>planets-board works!</p>
+
+
+<mat-card class='planet-card' *ngFor="let planet of planets">
+    <mat-card-content fxLayout='row' fxLayoutAlign='space-between center'>
+        <div fxLayout='column' fxLayoutAlign='center center' >
+            <img [src]='"../../assets/planets/" + planet.assetImageName' class='planet-image' [routerLink]='[".", planet.id]'/>
+            <span><b>{{planet.name}}</b></span>
+        </div>
+        <div fxLayout='column' fxLayoutAlign='start center'>
+            <h3>{{planet.description}}</h3>
+            <span><b>by captain:</b> {{planet.lastEditedBy}}</span>
+            <span><b>Robots:</b> {{planet.robotsCrew}}</span>
+        </div>
+        <div fxLayout='column' fxLayoutAlign='center center'>
+            <div [ngSwitch]="planet.status">
+                <div *ngSwitchCase="0" style="color:green">Ok</div>
+                <div *ngSwitchCase="1" style="color:orangered">!OK</div>
+                <div *ngSwitchCase="2" style="color:blue">To do</div>
+                <div *ngSwitchCase="3" style="color:grey">En Route</div>
+                <div *ngSwitchDefault>No status</div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
