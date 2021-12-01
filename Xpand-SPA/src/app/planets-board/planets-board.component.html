@@ -1,7 +1,7 @@
 
 
 <mat-card class='planet-card' *ngFor="let planet of planets">
-    <mat-card-content fxLayout='row' fxLayoutAlign='space-between center'>
+    <mat-card-content fxLayout='row' fxLayoutAlign='space-between center' fxLayoutGap='1rem'>
         <div fxLayout='column' fxLayoutAlign='center center' >
             <img [src]='"../../assets/planets/" + planet.assetImageName' class='planet-image' [routerLink]='[".", planet.id]'/>
             <span><b>{{planet.name}}</b></span>

@@ -11,5 +11,7 @@ namespace Xpand.API.Models
         public string Email { get; set; } 
         [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
+        [Required(ErrorMessage = "RobotsCrew is required")]
+        public string RobotsCrew { get; set; }
     }
 }

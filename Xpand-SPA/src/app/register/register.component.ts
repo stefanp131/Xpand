@@ -22,12 +22,14 @@ export class RegisterComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       userName: ['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
+      robotsCrew: ['', Validators.required]
     })
   }
 
   register() {
     this.accountService.register(this.registerForm.value).subscribe(() => {
+      this.router.navigate(['./planets-board']);
       this.snackBar.open('Successfully registered in!', 'Dismiss', { duration: 5000 });
     }, () => {
       this.snackBar.open('Something went wrong!', 'Dismiss', { duration: 5000 })

@@ -1,19 +1,19 @@
 <mat-card class="register-card">
-    <mat-card-title class="register-card-header"><h2>Register</h2></mat-card-title>
+    <mat-card-title class="register-card-header"><h2>Register Captain</h2></mat-card-title>
     <mat-card-content class="register-card-content">
         <form autocomplete="off" [formGroup]="registerForm" (ngSubmit)="registerForm.valid && register()">
             <div fxLayout="column">
                 <mat-form-field appearance="outline">
-                    <input matInput formControlName="userName" type="text" placeholder="Enter your username"/>
-    
+                    <input matInput formControlName="userName" type="text" placeholder="Enter your username"/>    
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                    <input matInput formControlName="email" type="text" placeholder="Enter your email"/>
-    
+                    <input matInput formControlName="email" type="text" placeholder="Enter your email"/>    
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                    <input matInput #password formControlName="password" type="password" placeholder="Enter your password"/>
-    
+                    <input matInput type="text" formControlName='robotsCrew' placeholder="Robots Crew" />    
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <input matInput #password formControlName="password" type="password" placeholder="Enter your password"/>    
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <input matInput type="password" #confirmPassword placeholder="Confirm password" />

@@ -73,10 +73,4 @@ export class PlanetUpdateFormComponent implements OnInit {
       this.snackBar.open('Successfully updated!', 'Dismiss', { duration: 5000 })
     });
   }
-
-  compareStatus(o1: MatSelectValue, o2: MatSelectValue) {
-    if(o1.name == o2.name && o1.id == o2.id )
-    return true;
-    else return false
-  }
 }

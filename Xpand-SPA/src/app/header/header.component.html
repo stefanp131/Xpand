@@ -3,13 +3,13 @@
     <div class="centered-title" >
       <span style="font-family: 'Bowlby One SC'; color: white;">XpanD</span>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-between">
-      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1rem">
+    <div fxLayout="row" class='nav-buttons' fxLayoutAlign="space-between">
+      <div fxLayout="row" class="menu" fxLayoutAlign="start center" fxLayoutGap="1rem">
         <button mat-raised-button *ngIf="accountService.currentUser$ | async" routerLink="/planets-board" color="primary">
           <span>Planets Board</span>
         </button>
       </div>      
-      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1rem">
+      <div fxLayout="row" class="account-buttons" fxLayoutAlign="start center" fxLayoutGap="1rem">
         <button mat-raised-button *ngIf="(accountService.currentUser$ | async) === null" color="info" routerLink="/register">
           Register
         </button>
