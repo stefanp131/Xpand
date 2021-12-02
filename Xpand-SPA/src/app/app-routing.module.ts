@@ -13,8 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'planets-board', component: PlanetsBoardComponent, canActivate: [AuthGuard] },
   { path: 'planets-board/:id', component: PlanetUpdateFormComponent, canActivate: [AuthGuard] },
-
-  //{ path: '**', component: HomeComponent}
+  { path: '**', component: HomeComponent}
 ];
 
 @NgModule({

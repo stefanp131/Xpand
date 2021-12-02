@@ -6,6 +6,7 @@
         <form autocomplete="off" *ngIf='planet' [formGroup]="planetForm" (ngSubmit)="update()">
             <div fxLayout="column">
                 <mat-form-field appearance="outline">
+                  <mat-label>Description</mat-label>
                     <textarea matInput formControlName="description" rows="4" type="text" placeholder="Enter your description"></textarea>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
@@ -15,7 +16,9 @@
                         {{item.name}}
                       </mat-option>                      
                     </mat-select>
-                  </mat-form-field>              
+                  </mat-form-field>
+                <button type="button" mat-raised-button routerLink="/planets-board">Cancel</button>
+                <br>
                 <button color="primary" mat-raised-button>Update</button>
             </div>                
         </form>

@@ -67,13 +67,6 @@ namespace Xpand.API.Controllers
             };
         }
 
-        [Authorize]
-        [HttpGet("test")]
-        public ActionResult Test()
-        {
-            return Ok("Tested Succcesfully");
-        }
-
         private async Task<bool> UserExists(string username)
         {
             return await this.userManager.Users.AnyAsync(x => x.UserName == username.ToLower());
